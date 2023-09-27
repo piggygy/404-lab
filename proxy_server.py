@@ -17,12 +17,12 @@ def send_request(host,port,request):
             result +=data
         return result
     
-def hand_connection(conn,addr):
+def handle_connection(conn,addr):
     with conn:
         print(f"Connected by {addr}")
         request = b''
         while True:
-            data = conn.recv(BYTE_TO_READ)
+            data = conn.recv(BYTES_TO_READ)
             if not data:
                 break
             print(data)
