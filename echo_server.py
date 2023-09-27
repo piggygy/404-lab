@@ -5,7 +5,7 @@ BYTES_TO_READ=4096
 HOST="127.0.0.1"
 PORT=8080
 
-def hand_connection(conn,addr):
+def handle_connection(conn,addr):
     with conn:
         print(f"Connected by {addr}")
         while True:
